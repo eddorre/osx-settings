@@ -1,0 +1,27 @@
+begin
+  require 'autotest/growl'
+rescue LoadError
+  puts "\e[31mMissing autotest-growl\e[0m"
+end
+
+begin
+  require 'autotest/fsevent'
+rescue
+  puts "\e[31mMissing autotest-fsevent\e[0m"
+end
+
+begin
+  require 'autotest/timestamp'
+rescue
+  puts "\e[31mMissing autotest-timestamp\e[0m"
+end
+
+Autotest::Growl::show_modified_files = false
+Autotest::Growl::clear_terminal = false
+Autotest::Growl::one_notification_per_run = true
+# Autotest::Growl::sticky_failure_notifications = true
+
+Autotest.add_hook :initialize do |autotest|
+  %w{.git .svn .hg .DS_Store ._* vendor}.each {|exception| autotest.add_exception(exception) }
+  false
+end
