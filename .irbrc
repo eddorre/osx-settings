@@ -55,12 +55,6 @@ extend_console 'wirble' do
   Wirble.colorize
 end
 
-# Hirb makes tables easy.
-extend_console 'hirb' do
-  Hirb.enable
-  extend Hirb::Console
-end
-
 extend_console 'irb_hacks' do
   # no configuration needed
 end
