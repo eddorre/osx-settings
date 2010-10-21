@@ -11,6 +11,7 @@ alias testlogd='tail -f log/test.log | grep DEBUG'
 alias devlogd='tail -f log/development.log | grep DEBUG'
 alias rr='touch tmp/restart.txt'
 alias r='rails'
+alias q='exit'
 
 # Git specific commands
 alias gpo='git push origin'
