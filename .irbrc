@@ -25,15 +25,15 @@ ANSI[:WHITE]     = "\e[37m"
 # Get the Ruby Version from RVM
 rvm_ruby = ENV['rvm_ruby_string'].to_s.gsub(/(^\w+\-(\d+\.?)+)/i).first || ''
 
-# Build a simple colorful IRB prompt
-IRB.conf[:PROMPT][:SIMPLE_COLOR] = {
-  :PROMPT_I => "#{ANSI[:BLUE]}#{rvm_ruby}>>#{ANSI[:RESET]} ",
-  :PROMPT_N => "#{ANSI[:MAGENTA]}#{rvm_ruby}>>#{ANSI[:RESET]} ",
-  :PROMPT_C => "#{ANSI[:RED]}?>#{ANSI[:RESET]} ",
-  :PROMPT_S => "#{ANSI[:YELLOW]}?>#{ANSI[:RESET]} ",
-  :RETURN   => "#{ANSI[:GREEN]}=>#{ANSI[:RESET]} %s\n",
-  :AUTO_INDENT => true }
-IRB.conf[:PROMPT_MODE] = :SIMPLE_COLOR
+# # Build a simple colorful IRB prompt
+# IRB.conf[:PROMPT][:SIMPLE_COLOR] = {
+#   :PROMPT_I => "#{ANSI[:BLUE]}#{rvm_ruby}>>#{ANSI[:RESET]} ",
+#   :PROMPT_N => "#{ANSI[:MAGENTA]}#{rvm_ruby}>>#{ANSI[:RESET]} ",
+#   :PROMPT_C => "#{ANSI[:RED]}?>#{ANSI[:RESET]} ",
+#   :PROMPT_S => "#{ANSI[:YELLOW]}?>#{ANSI[:RESET]} ",
+#   :RETURN   => "#{ANSI[:GREEN]}=>#{ANSI[:RESET]} %s\n",
+#   :AUTO_INDENT => true }
+# IRB.conf[:PROMPT_MODE] = :SIMPLE_COLOR
 
 def extend_console(name, care = true, required = true)
   if care
@@ -53,10 +53,6 @@ $console_extensions = []
 extend_console 'wirble' do
   Wirble.init
   Wirble.colorize
-end
-
-extend_console 'irb_hacks' do
-  # no configuration needed
 end
 
 # awesome_print is prints prettier than pretty_print
