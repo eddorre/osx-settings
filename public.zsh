@@ -1,6 +1,8 @@
 # Ruby specific commands
 alias rrm='rake routes | mate'
 alias 'gem?'='gem list | grep -i $1'
+alias run_specs="bundle exec rspec spec/models"
+alias run_acceptance="bundle exec rspec spec/acceptance"
 
 # Directory/File commands
 alias ..='cd ..'
