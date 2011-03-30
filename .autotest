@@ -22,6 +22,5 @@ Autotest::Growl::one_notification_per_run = true
 # Autotest::Growl::sticky_failure_notifications = true
 
 Autotest.add_hook :initialize do |autotest|
-  %w{.git .svn .hg .DS_Store ._* vendor}.each {|exception| autotest.add_exception(exception) }
-  false
+  %w{.git .svn .hg .DS_Store ._* vendor rerun.txt}.each {|exception| autotest.add_exception(exception) }
 end

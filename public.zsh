@@ -21,11 +21,6 @@ alias gpo='git push origin'
 alias gundo='git reset HEAD'
 alias 'branch?'='git branch | grep -i $1'
 
-#MySQL specific commands
-alias mysqlstart='sudo /opt/local/bin/mysqld_safe5'
-alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'
-alias mysql='mysql5'
-
 # Functions
 function sc() {
   if [ -f ./script/rails ]; then
