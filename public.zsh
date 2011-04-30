@@ -15,6 +15,7 @@ alias devlogd='tail -f log/development.log | grep DEBUG'
 alias rr='touch tmp/restart.txt'
 alias r='rails'
 alias q='exit'
+alias be="bundle exec"
 
 # Git specific commands
 alias gpo='git push origin'
@@ -52,7 +53,7 @@ function sgrc() {
 
 function sgmi() {
   if [ -f ./script/rails ]; then
-    rails g migration
+    rails g migration $1
   else
     ./script/generate migration $1
   fi
@@ -60,7 +61,7 @@ function sgmi() {
 
 function sgm() {
   if [ -f ./script/rails ]; then
-    rails g model
+    rails g model $1
   else
     ./script/generate model $1
   fi
