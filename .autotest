@@ -16,6 +16,12 @@ rescue
   puts "\e[31mMissing autotest-timestamp\e[0m"
 end
 
+begin
+  require 'active_support/inflector'
+rescue
+  puts "\e[31mMissing active support inflector\e[0m"
+end
+
 Autotest::Growl::show_modified_files = false
 Autotest::Growl::clear_terminal = false
 Autotest::Growl::one_notification_per_run = true
