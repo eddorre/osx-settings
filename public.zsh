@@ -22,6 +22,9 @@ alias gpo='git push origin'
 alias gundo='git reset HEAD'
 alias 'branch?'='git branch | grep -i $1'
 
+# Pow commands
+alias kapow='powify server restart'
+
 # Functions
 function sc() {
   if [ -f ./script/rails ]; then
