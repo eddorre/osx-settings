@@ -13,7 +13,7 @@ plugins=(rails3 git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/lib/postgresql84/bin/:/local/node/bin:$PATH
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/local/node/bin:~/bin:$PATH
 
 # For autotest
 export RSPEC=true autospec
