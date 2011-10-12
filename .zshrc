@@ -13,11 +13,12 @@ plugins=(rails3 git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/local/node/bin:~/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/local/node/bin:~/bin:~/usr/local/lib/node:$PATH
 
 # For autotest
 export RSPEC=true autospec
 export AUTOFEATURE=true autospec
+export SILENCE_SPEC_DEPRECATION_WARNINGS=true
 
 unsetopt auto_name_dirs
 
